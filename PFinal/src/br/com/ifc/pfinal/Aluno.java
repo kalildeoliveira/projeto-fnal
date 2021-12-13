@@ -14,6 +14,12 @@ public class Aluno extends Usuario {
 	}	
 	public void respondePergunta () {
 		Pergunta p = new Pergunta();
+		System.out.println("#################################################");
+		System.out.println("\n\n\n");
+		System.out.println("    SEJA BEM-VINDO, ALUNO!  ");
+		System.out.println("\n\n\n");
+		System.out.println("#################################################");
+		System.out.println("\n\n\n");
 		System.out.println(p.getPergunta());
 		sc = new Scanner(System.in);
 		System.out.println();
