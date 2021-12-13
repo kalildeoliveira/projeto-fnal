@@ -1,12 +1,10 @@
 package br.com.ifc.pfinal;
 
 public class Pergunta {
-	private int acertos=0;
-	private int erros=0;
-	private int numero=0;
-	private String pergunta = " ";
-	private String resposta=" ";
-	private String gabarito=" ";
+	private int acertos=0, erros=0, numero=0;
+	private String pergunta = "Qual é o seu nome?";		// a String já vem com uma pergunta
+	private String resposta="A";						// padrão
+	private String gabarito="A";						// padrão
 	
 	public Pergunta () {
 	}
@@ -50,13 +48,8 @@ public class Pergunta {
 		return resposta;
 	}
 
-	public void setResposta(int numero, String resposta) {
-		getNumero();
-		if (this.resposta.equals(getGabarito()) {
-			setAcertos(1);
-		} else {
-			setErros(1);
-		}
+	public void setResposta(String resposta) {
+		this.resposta = resposta;
 	}
 
 	public String getGabarito() {
