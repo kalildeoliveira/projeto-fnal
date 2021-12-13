@@ -13,31 +13,27 @@ public class Professor extends Usuario {
 		System.out.println("B - Falso ou Verdadeiro");
 		System.out.print("Opção : ");
 		opcao = sc.next();
-		if (opcao.equals(a)) {
-			String enunciado, letraA, letraB, letraC, enunciadoMaisAlternativa, gabarito = new String();
-			System.out.print("Enunciado da pergunta: ");
-			enunciado = sc.nextLine();
+		if (opcao.equals(a)){
+			System.out.println("Qual o enunciado da pergunta?");
+			System.out.print("Enunciado: ");
+			String enun = sc.nextLine();
+			String enunciado = sc.nextLine();
+			System.out.println("Agora escreva as alternativas A, B e C");
 			System.out.print("Alternativa A: ");
-			letraA = sc.nextLine();
-			System.out.print("Alternativa B: ");
-			letraB = sc.nextLine();
+			String letraA = sc.nextLine();
+			System.out.print("Alternatva B: ");
+			String letraB = sc.nextLine();
 			System.out.print("Alternativa C: ");
-			letraC = sc.nextLine();
-			enunciadoMaisAlternativa = enunciado + "\nA -" + letraA + "\nB -" + letraB + "\nC -" + letraC;
-			System.out.println(enunciadoMaisAlternativa);			
-			boolean sairDoLoop = true;
-			while (sairDoLoop) {
-				System.out.print("Gabarito: (A, B ou C?) ");
-				gabarito = sc.next();
-				if (gabarito.equals(a) || gabarito.equals(b) || gabarito.equals(c)) {
-					p.setPergunta(enunciadoMaisAlternativa, null, gabarito);
-					sairDoLoop = false;
-				} else {
-					System.out.println("O gabarito deve ser apenas uma letra. Use maiúsculo!");
-				}
-			}
+			String letraC = sc.nextLine();
+			String concatenacao = "\n"+enunciado + "\n A - "+letraA+"\n B - "+letraB+"\n C - "+letraC;
+			p.setPergunta(concatenacao);
+			System.out.println("Informe o gabarito desta pergunta (\"A, B ou C\")");
+			System.out.print("Gabarito: ");
+			String gabarito = sc.nextLine();
+			System.out.println(p.getPergunta());
+			System.out.println(p.getGabarito());
 		}
-		if (opcao.equals(b)) {
+		else if (opcao.equals(b)) {
 			String enunciado, f, v = new String();
 			f= "F"; v="V"; 
 			System.out.print("Enunciado da pergunta: ");
